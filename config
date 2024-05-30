@@ -185,10 +185,10 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-        position top
-}
+# bar {
+#         status_command i3status
+#         position top
+# }
 
 # CUSTOM
 
@@ -198,13 +198,13 @@ exec_always --no-startup-id xset r rate 250 35
 exec_always --no-startup-id xset s off -dpms
 
 # colors (everforest)
-set $blue "#7fbbb3"
-set $grey "#859289"
-set $black "#272e33"
-set $blackish "#3c4841"
-set $white "#d3c6aa"
-set $yellow "#dbbc7f"
-set $purple "#d699b6"
+set $blue #7fbbb3
+set $grey #859289
+set $black #272e33
+set $blackish #3c4841
+set $white #d3c6aa
+set $yellow #dbbc7f
+set $purple #d699b6
 
 # class                 border      backgr.     text    indicator child_border
 client.focused          $blue       $blue       $black  #2e9ef4   $blue
@@ -214,5 +214,22 @@ client.urgent           #2f343a     #900000     #ffffff #900000   #900000
 client.placeholder      #000000     #0c0c0c     #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
+bar {
+    status_command i3status
+    position top
+    colors {
+        background $black
+        statusline $white
+        separator $grey
+
+        focused_workspace  $blue     $blue      $black
+        # active_workspace   $white    $white
+        inactive_workspace $blackish $blackish  $grey
+        # urgent_workspace   $yellow   $yellow
+    }
+}
+
 # open firefox with keybind
 bindsym $mod+b exec --no-startup-id firefox -p
+
+exec --no-startup-id feh ~/.config/i3/japanese_pedestrian_street.png --bg-fill
