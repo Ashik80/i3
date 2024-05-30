@@ -195,6 +195,7 @@ bar {
 exec_always --no-startup-id xinput set-prop 15 "libinput Natural Scrolling Enabled" 1
 exec_always --no-startup-id xinput set-prop 15 "libinput Tapping Enabled" 1
 exec_always --no-startup-id xset r rate 250 35
+exec_always --no-startup-id xset s off -dpms
 
 # colors (everforest)
 set $blue "#7fbbb3"
