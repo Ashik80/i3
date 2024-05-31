@@ -206,9 +206,10 @@ set $white #d3c6aa
 set $yellow #dbbc7f
 set $purple #d699b6
 set $red #e67e80
+set $green #a7c080
 
 # class                 border     backgr.    text     indicator  child_border
-client.focused          $blue      $blue      $black   #2e9ef4    $blue
+client.focused          $green     $green     $black   $green     $green
 client.focused_inactive #333333    #5f676a    #ffffff  #484e50    #5f676a
 client.unfocused        $blackish  $blackish  $grey    #292d2e    #222222
 client.urgent           #2f343a    $red       #ffffff  $red       $red
@@ -223,7 +224,7 @@ bar {
         statusline $white
         separator $grey
 
-        focused_workspace  $blue     $blue      $black
+        focused_workspace  $green    $green     $black
         # active_workspace   $white    $white
         inactive_workspace $blackish $blackish  $grey
         # urgent_workspace   $yellow   $yellow
